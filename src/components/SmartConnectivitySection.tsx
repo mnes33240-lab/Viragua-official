@@ -20,23 +20,9 @@ export function SmartConnectivitySection() {
 
   return (
     <section ref={ref} className="relative bg-[#0a0a0a] overflow-hidden" style={{ height: '130vh' }}>
-      <div className="sticky top-0 h-screen flex items-center justify-center overflow-hidden">
-        {/* Background video */}
-        <motion.div style={{ opacity }} className="absolute inset-0 flex items-center justify-center bg-[#0a0a0a]">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-full object-contain"
-          >
-            <source src="/smart-connectivity.mp4" type="video/mp4" />
-          </video>
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-transparent" />
-        </motion.div>
-
-        {/* Left side text */}
-        <motion.div style={{ y: captionY, opacity: captionOpacity }} className="relative z-10 self-end pb-14 px-8 md:px-16 w-full max-w-md">
+      <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden">
+        {/* Text above video */}
+        <motion.div style={{ y: captionY, opacity: captionOpacity }} className="relative z-10 px-8 md:px-16 w-full max-w-md pt-10 pb-6">
           <p className="text-xs tracking-[0.3em] text-white/50 uppercase mb-3 font-light">
             Intelligent Control
           </p>
@@ -57,6 +43,19 @@ export function SmartConnectivitySection() {
               </div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Video below text */}
+        <motion.div style={{ opacity }} className="relative flex-1 flex items-center justify-center bg-[#0a0a0a] min-h-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-contain"
+          >
+            <source src="/smart-connectivity.mp4" type="video/mp4" />
+          </video>
         </motion.div>
       </div>
     </section>
