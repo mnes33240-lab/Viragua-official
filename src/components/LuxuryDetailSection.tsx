@@ -41,7 +41,7 @@ export function LuxuryDetailSection() {
             playsInline
             className="w-full h-full object-contain"
           >
-            <source src="/timeless-design.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}timeless-design.mp4`} type="video/mp4" />
           </video>
         </motion.div>
       </div>

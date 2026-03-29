@@ -27,7 +27,7 @@ export function HeroSection() {
       >
         <motion.div ref={ref} style={{ clipPath }} className="w-full h-full">
           <img
-            src="/lifestyle-hero.png"
+            src={`${import.meta.env.BASE_URL}lifestyle-hero.png`}
             alt="VIRÁGUA Dispensers - Black and White Marble"
             className="w-full h-full object-contain"
           />

@@ -54,7 +54,7 @@ export function SmartConnectivitySection() {
             playsInline
             className="w-full h-full object-contain"
           >
-            <source src="/smart-connectivity.mp4" type="video/mp4" />
+            <source src={`${import.meta.env.BASE_URL}smart-connectivity.mp4`} type="video/mp4" />
           </video>
         </motion.div>
       </div>
